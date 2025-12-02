@@ -2,11 +2,11 @@
 
 int main() {
     char noms[5][50] = {
-        "Durand", "Martin", "Kaya", "Benali", "Rossi"
+        "Bahtiyar", "Arslan", "Bahtiyar", "Belkacem", "AYI"
     };
 
     char prenoms[5][50] = {
-        "Alice", "Leo", "Feyza", "Samir", "Lucia"
+        "Namir", "Bilal", "Feyza", "Alya", "AYI"
     };
 
     char adresses[5][100] = {
@@ -17,8 +17,8 @@ int main() {
         "9 Rue des Arts"
     };
 
-    float noteProg[5] = {14.5, 12.0, 18.0, 9.5, 13.0};
-    float noteSE[5]   = {13.0, 15.5, 17.5, 8.0, 14.0};
+    float noteProg[5] = {14.5, 12.0, 20.0, 9.5, 13.0};
+    float noteSE[5]   = {13.0, 15.5, 20.5, 8.0, 14.0};
 
     for (int i = 0; i < 5; i++) {
         printf("Étudiant %d :\n", i + 1);
@@ -31,3 +31,4 @@ int main() {
 
     return 0;
 }
+
