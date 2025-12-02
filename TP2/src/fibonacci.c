@@ -1,22 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int n;
-    printf("Entrez la valeur de n : ");
-    scanf("%d", &n);
+    int n = 7;
+    int a = 0, b = 1, c;
 
-    int u0 = 0, u1 = 1, u;
-
-    if (n >= 0) printf("%d ", u0);
-    if (n >= 1) printf("%d ", u1);
+    printf("%d, %d", a, b);
 
     for (int i = 2; i <= n; i++) {
-        u = u0 + u1;
-        printf("%d ", u);
-        u0 = u1;
-        u1 = u;
+        c = a + b;
+        printf(", %d", c);
+        a = b;
+        b = c;
     }
 
-    printf("\n");
     return 0;
 }
