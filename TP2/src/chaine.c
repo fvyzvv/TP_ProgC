@@ -1,48 +1,37 @@
 #include <stdio.h>
 
-int longueur(const char *str) {
-    int count = 0;
-    while (str[count] != '\0') {
-        count++;
-    }
-    return count;
-}
+int main() {
+    char chaine1[50] = "Hello";
+    char chaine2[50] = " World!";
+    char copie[50];
+    char concat[100];
+    int i = 0, j = 0, longueur = 0;
 
-void copie(char *dest, const char *src) {
-    int i = 0;
-    while (src[i] != '\0') {
-        dest[i] = src[i];
+    while (chaine1[longueur] != '\0') {
+        longueur++;
+    }
+
+    while (chaine1[i] != '\0') {
+        copie[i] = chaine1[i];
         i++;
     }
-    dest[i] = '\0';
-}
+    copie[i] = '\0';
 
-void concat(char *dest, const char *src) {
-    int i = 0;
-    while (dest[i] != '\0') {
+    i = 0;
+    while (chaine1[i] != '\0') {
+        concat[i] = chaine1[i];
         i++;
     }
-
-    int j = 0;
-    while (src[j] != '\0') {
-        dest[i + j] = src[j];
+    while (chaine2[j] != '\0') {
+        concat[i] = chaine2[j];
+        i++;
         j++;
     }
-    dest[i + j] = '\0';
-}
+    concat[i] = '\0';
 
-int main() {
-    char str1[100] = "Hello";
-    char str2[100] = " World!";
-    char copieStr[100];
-
-    printf("Longueur de str1 : %d\n", longueur(str1));
-
-    copie(copieStr, str1);
-    printf("Copie : %s\n", copieStr);
-
-    concat(str1, str2);
-    printf("Concaténation : %s\n", str1);
+    printf("Longueur de chaine1 : %d\n", longueur);
+    printf("Copie de chaine1 : %s\n", copie);
+    printf("Concaténation : %s\n", concat);
 
     return 0;
 }
